@@ -4,4 +4,6 @@
 打包采用webpack4打包工具;  
 发布使用的是fis3构建工具发布;  
 监控方面采用了sentry进行报错监控;  
-欢迎使用~
+  
+  
+author:KaFan & YellowBee
