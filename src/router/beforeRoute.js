@@ -19,7 +19,7 @@ export default function vuexRouterInterceptor () {
             let login = async () => {
                 // 判断是否检验过checkLogin
                 store.state.User.isLogin == null && (await store.dispatch('GetUserParams'))
-                // console.log(store.state.User.userParams)
+                // console.log(store.state.User.userInfoParams)
                 // 是否需要登录才能进去
                 if(to.meta.isAuth && !store.state.User.isLogin) {
                     // 跳登录逻辑

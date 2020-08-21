@@ -5,11 +5,13 @@ const ReplaceAssetsPlugin = require('@dlophin/replace-assets-plugin')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { publicPath, productionGzip, useSentry } = require('./h5.conf')
+// const pagesEntries = require('./page.config') //多页应用时开启
 
 function resolve (dir) {
     return path.join(__dirname, '..', dir)
 }
 module.exports = {
+    // pages:pagesEntries, //多页应用时入口
     publicPath: publicPath,
     outputDir: 'dist',
     assetsDir: 'static',

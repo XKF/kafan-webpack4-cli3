@@ -5,9 +5,9 @@ const { useSentry, userHost } = require('../../h5.conf')
 const state = {
     isLogin: null,
     info: {},
-    userParams: {
+    userInfoParams: {
 
-    } // 用户携带参数
+    } // 用户登录信息
 }
 
 const getters = {
@@ -22,7 +22,7 @@ const mutations = {
         state.info = Object.assign({}, state.info, info)
     },
     [TYPE.USER_PARAMS]: function(state, params) {
-        state.userParams = params
+        state.userInfoParams = params
     }
 }
 
@@ -44,6 +44,11 @@ const actions = {
         if (typeof params == 'object') {
             commit(TYPE.USER_PARAMS, params)
         }
+    },
+
+    //跳转登录
+    jumpToLogin: function(){
+        //code.....
     }
 }
 

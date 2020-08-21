@@ -3,14 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta content="telephone=no" name="format-detection">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= process.env.VUE_APP_TITLE %></title>
+    <!--多页面使用以下这个-->
+    <!-- <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="keywords" content="<%= htmlWebpackPlugin.options.meta.keywords %>">
+    <meta name="description" content="<%= htmlWebpackPlugin.options.meta.description %>"> -->
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= process.env.VUE_APP_TITLE %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
     <div id="app"></div>
     <% if(process.env.VUE_APP_WEB_ENV != 'jenkins') { %>
       <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js" charset="utf-8"></script>
